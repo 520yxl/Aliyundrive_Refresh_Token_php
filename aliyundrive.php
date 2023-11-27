@@ -16,7 +16,7 @@ function is_SSL(){
 	return FALSE;
 }
 
-$api_url='https://openapi.aliyundrive.com/oauth/access_token';
+$api_url='https://openapi.alipan.com/oauth/access_token';
 $grant_type='authorization_code';
 $code=$_GET['code'];
 //获取回调地址
@@ -27,7 +27,7 @@ $hts='https://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 }
 $redirect_uri=urlEncode($hts);
 //重定向到阿里云盘登陆页面
-$url='https://openapi.aliyundrive.com/oauth/authorize?client_id='.$client_id.'&redirect_uri='.$redirect_uri.'&scope=user:base,file:all:read,file:all:write&state=&response_type=code';
+$url='https://openapi.alipan.com/oauth/authorize?client_id='.$client_id.'&redirect_uri='.$redirect_uri.'&scope=user:base,file:all:read,file:all:write&state=&response_type=code';
 //https://openapi.aliyundrive.com/oauth/authorize?client_id=55091393987b4cc090b090ee17e85e0a&redirect_uri=oob&scope=
 // redirect($url);
 $post_data=array();
